@@ -1,4 +1,4 @@
-from game.dealer import Dealer
+from dealer import Dealer
 
 class Director:
     """
@@ -60,7 +60,7 @@ class Director:
         """
         Outputs the last bit of data, as well as some last minute proccessing
         """
-        
+
         print(f'Your score is: {self.points}')
 
         if self.points <= 0:
