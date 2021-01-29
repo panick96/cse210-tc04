@@ -39,7 +39,7 @@ class Director:
         """
         Prints and asks for the user input
         """
-        print(f"The card is {self.dealer.previous_card}")
+        print(f"The card is {self.dealer.prev_card}")
         self.user_H_L_choice = input("Higher or Lower? [h/l] ")
         print(f"The next card was {self.dealer.current_card}")
 
