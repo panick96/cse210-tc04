@@ -1,4 +1,4 @@
-from dealer import Dealer
+from game.dealer import Dealer
 
 class Director:
     """

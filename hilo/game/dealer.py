@@ -1,4 +1,4 @@
-from deck import Deck
+from game.deck import Deck
 
 
 class Dealer():
