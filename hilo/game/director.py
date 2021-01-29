@@ -41,14 +41,39 @@ class Director:
         """
         print(f"The card is {self.dealer.previous_card}")
         self.user_H_L_choice = input("Higher or Lower? [h/l] ")
-        print(f"The next card was {self.dealer.current_card")
-        print(f'Your score is: {self.points}')
-        self.get_choice = ("Keep Playing? [y/n] ")
+        print(f"The next card was {self.dealer.current_card}")
+
 
     def do_updates(self):
         """
         This will adjust data based off of user's choices
+
         """
+        if self.user_H_L_choice == self.dealer.determine_result:
+            self.points += 100
+        elif self.user_H_L_choice != self.dealer.determine_result:
+            self.points -= 75
+        else:
+            self.points += 0
+
+    def do_outputs(self):
+        """
+        Outputs the last bit of data, as well as some last minute proccessing
+        """
+        
+        print(f'Your score is: {self.points}')
+
+        if self.points <= 0:
+            self.keep_playing == False
+
+        self.get_choice = ("Keep Playing? [y/n] ")
+
+        if self.get_choice == 'y':
+            self.keep_playing == True
+        elif self.get_choice == 'n':
+            self.keep_playing == False
+
+
 
         
 
