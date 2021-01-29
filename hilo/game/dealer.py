@@ -1,4 +1,4 @@
-from game.deck import Deck
+from deck import Deck
 
 
 class Dealer():
@@ -19,7 +19,8 @@ class Dealer():
             self (Dealer): An instance of the Dealer class.
         """
         self.deck = Deck()
-        self.current_card = 0
+        self.deck.create_deck()
+        self.current_card = self.deck.draw_card()
         self.prev_card = 0
 
     def draw_card(self):
@@ -30,7 +31,8 @@ class Dealer():
         """
         self.prev_card = self.current_card
         # TODO: get the deck.function to draw a card
-        self.current_card = ''
+        self.current_card = self.deck.draw_card()
+        print(self.current_card)
 
     def determine_result(self):
         """ Determines if the drawn (current) card is higher or lower than
@@ -50,3 +52,10 @@ class Dealer():
         elif self.current_card:
             result = 'equal'
         return result
+
+
+# Test the class
+"""
+dealer1 = Dealer()
+dealer1.draw_card()
+"""
