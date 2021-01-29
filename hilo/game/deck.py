@@ -29,10 +29,11 @@ class Deck:
             
 
 test = Deck()
-
+"""
 test.create_deck()
 
 print(test.deck)
 test.draw_card()
 print(test.card_choice)       
 print(test.deck)
+"""
