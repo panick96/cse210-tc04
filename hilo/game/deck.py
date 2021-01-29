@@ -37,7 +37,6 @@ class Deck:
             
 """
 test = Deck()
-"""
 test.create_deck()
 
 print(test.deck)
