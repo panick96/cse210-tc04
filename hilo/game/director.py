@@ -64,8 +64,6 @@ class Director:
         Outputs the last bit of data, as well as some last minute proccessing
         """
 
-        print(f'Your score is: {self.points}')
-
         if self.points <= 0:
             print('YOU LOSE')
             self.keep_playing == False
