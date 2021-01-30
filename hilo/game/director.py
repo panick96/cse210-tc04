@@ -1,4 +1,5 @@
 from game.dealer import Dealer
+from game.highscore import Highscore
 
 class Director:
     """
@@ -24,6 +25,7 @@ class Director:
         self.play_again = True
         self.get_choice = ""
         self.dealer = Dealer()
+        self.highscore = Highscore()
 
     def start_game(self):
         """
@@ -39,6 +41,7 @@ class Director:
         """
         Prints and asks for the user input
         """
+        self.dealer.draw_card()
         print(f"The card is {self.dealer.prev_card}")
         self.user_H_L_choice = input("Higher or Lower? [h/l] ")
         print(f"The next card was {self.dealer.current_card}")
@@ -64,14 +67,20 @@ class Director:
         print(f'Your score is: {self.points}')
 
         if self.points <= 0:
+            print('YOU LOSE')
             self.keep_playing == False
+            quit()
 
-        self.get_choice = ("Keep Playing? [y/n] ")
+        self.get_choice = input("Keep Playing? [y/n] ")
 
         if self.get_choice == 'y':
             self.keep_playing == True
         elif self.get_choice == 'n':
+            self.highscore.get_highscore()
+            self.highscore.check_highscore(self.points)
+            self.highscore.save_highscore
             self.keep_playing == False
+            quit()
 
 
 

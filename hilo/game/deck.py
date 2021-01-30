@@ -6,7 +6,7 @@ class Deck:
     
 
     def __init__(self) -> None:
-        self.deck = []        
+        self.deck = [1,2,3,4,5,6,7,8,9,10,11,12,13]        
         self.card_choice = 0
         
 
