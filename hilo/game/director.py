@@ -61,11 +61,11 @@ class Director:
         Outputs the last bit of data, as well as some last minute proccessing
         """
 
-        print(f'Your score is: {self.points}')
-
         if self.points <= 0:
-            self.keep_playing == False
+            self.keep_playing = False
+            self.points = 0
 
+        print(f'Your score is: {self.points}')
         self.get_choice = ("Keep Playing? [y/n] ")
 
         if self.get_choice == 'y':
