@@ -17,7 +17,7 @@ class Deck:
         """
         counter = 0
 
-        for card in range(10):            
+        for card in range(13):            
             counter += 1
             self.deck.append(counter)
     
