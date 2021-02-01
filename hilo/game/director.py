@@ -79,6 +79,7 @@ class Director:
                 self.highscore.get_highscore()
                 self.highscore.check_highscore(self.points)
                 self.highscore.save_highscore
+                print(f'Your highscore was: {self.highscore.highscore}')
                 self.keep_playing == False
                 quit()
 

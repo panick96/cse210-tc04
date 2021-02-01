@@ -44,5 +44,5 @@ class Highscore:
         if points > self.highscore:
             self.highscore = points
         else:
-            self.highscore =self.highscore
+            self.highscore = self.highscore
 
