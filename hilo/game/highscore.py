@@ -48,8 +48,3 @@ class Highscore:
         highscore = self.highscore
         return highscore
 
-
-test = Highscore()
-test.get_highscore()
-test.check_highscore(26)
-test.save_highscore()
