@@ -1,7 +1,6 @@
 """
 Keeps track of highscore
 """
-import csv
 from os import read
 class Highscore:
     """
@@ -46,4 +45,11 @@ class Highscore:
             self.highscore = points
         else:
             self.highscore = self.highscore
-        return self.highscore
+        highscore = self.highscore
+        return highscore
+
+
+test = Highscore()
+test.get_highscore()
+test.check_highscore(26)
+test.save_highscore()
