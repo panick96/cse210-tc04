@@ -20,6 +20,7 @@ class Highscore:
         with open('hilo/game/hs.txt') as highscore:
             score = highscore.read()
             self.highscore = int(score)
+            return self.highscore
             
 
 
@@ -45,4 +46,4 @@ class Highscore:
             self.highscore = points
         else:
             self.highscore = self.highscore
-
+        return self.highscore

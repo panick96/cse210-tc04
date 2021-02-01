@@ -27,7 +27,7 @@ class Deck:
         assigns card_choice to an integer
         """
         choice = random.choice(self.deck)
-        index = choice - 1
+        index = self.deck.index(choice)
         card = self.deck[index]
         self.card_choice = card
         del self.deck[index]

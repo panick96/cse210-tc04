@@ -76,7 +76,8 @@ class Director:
                 self.keep_playing == True
             elif self.get_choice == 'n':
                 self.highscore.get_highscore()
-                self.highscore.check_highscore(self.points)
+                check_points = self.points
+                self.highscore.check_highscore(check_points)
                 self.highscore.save_highscore
                 print(f'Your highscore was: {self.highscore.highscore}')
                 self.keep_playing == False
