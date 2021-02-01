@@ -19,7 +19,7 @@ class Dealer():
             self (Dealer): An instance of the Dealer class.
         """
         self.deck = Deck()
-        self.current_card = 0
+        self.current_card = self.deck.draw_card()
         self.prev_card = 0
 
     def draw_card(self):
@@ -29,11 +29,7 @@ class Dealer():
             self (Dealer): An instance of the Dealer class.
         """
         self.prev_card = self.current_card
-        # TODO: get the deck.function to draw a card
         self.current_card = self.deck.draw_card()
-        
-        if not self.deck.deck:
-            self.deck.create_deck()
 
     def determine_result(self):
         """ Determines if the drawn (current) card is higher or lower than
