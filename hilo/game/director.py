@@ -52,9 +52,9 @@ class Director:
         This will adjust data based off of user's choices
 
         """
-        if self.user_H_L_choice == self.dealer.determine_result:
+        if self.user_H_L_choice == self.dealer.determine_result():
             self.points += 100
-        elif self.user_H_L_choice != self.dealer.determine_result:
+        elif self.user_H_L_choice != self.dealer.determine_result():
             self.points -= 75
         else:
             self.points += 0
@@ -68,7 +68,6 @@ class Director:
             print('YOU LOSE')
             self.keep_playing == False
             quit()
-<<<<<<< HEAD
         else:
             print(f'Points = {self.points}')
             self.get_choice = input("Keep Playing? [y/n] ")
@@ -82,28 +81,3 @@ class Director:
                 print(f'Your highscore was: {self.highscore.highscore}')
                 self.keep_playing == False
                 quit()
-=======
-
-        self.get_choice = input("Keep Playing? [y/n] ")
-
-        if self.get_choice == 'y':
-            self.keep_playing == True
-        elif self.get_choice == 'n':
-            self.highscore.get_highscore()
-            self.highscore.check_highscore(self.points)
-            self.highscore.save_highscore
-            self.keep_playing == False
-            quit()
->>>>>>> c646d031aff703d79a49ec6fabaa0dca715683a6
-
-
-
-        
-
-
-
-
-
-
-    
-
